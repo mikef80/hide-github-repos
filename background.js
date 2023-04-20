@@ -11,7 +11,6 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 const regex = /https:\/\/github.com\/.+tab=repositories/gim;
-const githubRepos = `https://github.com/mikef80?tab=repositories`;
 
 chrome.action.onClicked.addListener(async (tab) => {
   let validTabURL = await tab.url.match(regex);
@@ -39,13 +38,13 @@ chrome.action.onClicked.addListener(async (tab) => {
     if (nextState === "ON") {
       // Insert the CSS file when the user turns the extension on
       await chrome.scripting.insertCSS({
-        files: ["focus-mode.css"],
+        files: ["hide.css"],
         target: { tabId: tab.id },
       });
     } else if (nextState === "OFF") {
       // Remove the CSS file when the user turns the extension off
       await chrome.scripting.removeCSS({
-        files: ["focus-mode.css"],
+        files: ["hide.css"],
         target: { tabId: tab.id },
       });
     }
