@@ -22,7 +22,7 @@
       "256": "images/256.png"
     }
   },
-  "permissions": ["activeTab", "scripting", "tabs"],
+  "permissions": ["activeTab", "scripting"],
   "commands": {
     "_execute_action": {
       "suggested_key": {
