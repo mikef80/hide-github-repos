@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Hide Archived",
+  "name": "RepoHide",
   "description": "Hide archived repos in Github",
   "version": "1.0.0",
   "icons": {
@@ -26,8 +26,8 @@
   "commands": {
     "_execute_action": {
       "suggested_key": {
-        "default": "Ctrl+B",
-        "mac": "Command+B"
+        "default": "Ctrl+H",
+        "mac": "Command+H"
       }
     }
   }
